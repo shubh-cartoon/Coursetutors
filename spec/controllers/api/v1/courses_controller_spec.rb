@@ -8,7 +8,7 @@ def get_token(pass = ENV['API_USER_PASSWORD'])
       user: [ENV['API_USER'], pass],
       exp: 2.hours.from_now.to_i
     },
-    Rails.application.credentials.secret_key_base.to_s,
+    ENV['SECRET_KEY_BASE'].to_s,
     'HS256'
   )
 end

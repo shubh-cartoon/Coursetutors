@@ -26,7 +26,7 @@ module AuthenticationConcern
   def get_user_from(token)
     token = token.gsub(/Bearer /, '')
 
-    payload = JWT.decode(token, Rails.application.credentials.secret_key_base).first
+    payload = JWT.decode(token, ENV['SECRET_KEY_BASE']).first
 
     ENV['API_USER'] if ENV['API_USER'].eql?(payload['user'][0]) && ENV['API_USER_PASSWORD'].eql?(payload['user'][1])
   end

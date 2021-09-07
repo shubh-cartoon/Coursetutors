@@ -13,7 +13,7 @@ module Api
               user: [username, password],
               exp: 2.hours.from_now.to_i
             },
-            Rails.application.credentials.secret_key_base.to_s,
+            ENV['SECRET_KEY_BASE'].to_s,
             'HS256'
           )
           render json: { token: token }, status: :ok
