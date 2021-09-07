@@ -5,20 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - 2.6.8
 
-* System dependencies
+* Rails version - 6.1.4
 
-* Configuration
+* Database - Postgres
 
-* Database creation
+* Database creation/manipualtion - rails db:create, rails db:migrate
 
-* Database initialization
+* How to run the test suite - rspec
 
-* How to run the test suite
+* Hosted on Heroku - Steps for demo
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Import Postman Collection for more info using: https://www.getpostman.com/collections/56757f41159b6c400548
 
 * ...
